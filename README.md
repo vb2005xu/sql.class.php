@@ -186,8 +186,7 @@ $cond = array(
 	'bookname' => array("%色'色%",'LIKE'),
 );
 $result = SqlHelper::parse_cond($ds,$cond,FALSE);
-# note osc ' 符号解析存在问题,所以使用了 2个 \
-assertEqual($result,"bookname LIKE '%色\\'色%'");
+assertEqual($result,"bookname LIKE '%色\'色%'");
 
 // 数据表字段名比较
 $cond = array(
